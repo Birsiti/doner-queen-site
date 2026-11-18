@@ -1,0 +1,345 @@
+<!-- изменено 2026-11-18 14:40 -->
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Doner Queen — шаурма в Боровлянах</title>
+<meta name="description" content="Шаурма королевского размера в Боровлянах. Меню с фото, доставка за 25–40 минут, заказ в Telegram.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Doner Queen">
+<meta property="og:title" content="Doner Queen — шаурма королевского размера">
+<meta property="og:description" content="Боровляны · меню с фото · доставка 25–40 минут">
+<meta property="og:url" content="https://doner.tg-studio.by/">
+<meta property="og:image" content="https://doner.tg-studio.by/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0C0807">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23F0412A'/%3E%3Cpath d='M4.5 9l3 2.3L12 6l4.5 5.3 3-2.3-1.6 8.5H6.1z' fill='%23FFC547'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero.jpg">
+<script>
+(function(){ var p='auto'; try{p=localStorage.getItem('dq_site_theme')||'auto'}catch(e){}
+  document.documentElement.setAttribute('data-theme', p!=='auto'?p:(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark')); })();
+</script>
+<style>
+:root{
+  --r-xl:28px;--r-lg:22px;--r:16px;
+  --fire:linear-gradient(135deg,#FF7A1A 0%,#F0412A 55%,#D61F3C 100%);
+  --goldfill:linear-gradient(135deg,#FFD866 0%,#FFB51F 60%,#F59300 100%);
+  --ease:cubic-bezier(.2,.8,.2,1);--hdr:68px;--wrap:1120px;
+}
+:root[data-theme="dark"]{
+  --bg:#0C0807;--bg-2:#120C0A;--surface:#19110F;--surface-2:#221815;--surface-3:#2E211D;
+  --ink:#FFF5EA;--ink-soft:#CDB6A7;--ink-faint:#94806F;
+  --gold:#FFC547;--gold-soft:rgba(255,197,71,.13);--on-gold:#1E1200;
+  --line:rgba(255,197,71,.10);--line-2:rgba(255,197,71,.24);--ok:#46D68F;--danger:#FF6A6A;
+  --glass:rgba(16,11,9,.74);--card-shadow:0 1px 0 rgba(255,255,255,.04) inset,0 10px 30px rgba(0,0,0,.35);
+  --scrim:linear-gradient(180deg,rgba(25,17,15,0) 40%,rgba(25,17,15,.7) 75%,#19110F 100%);
+}
+:root[data-theme="light"]{
+  --bg:#FFF8EF;--bg-2:#FFF1E2;--surface:#FFFFFF;--surface-2:#FBF0E3;--surface-3:#F2E1CD;
+  --ink:#1F1310;--ink-soft:#6B5246;--ink-faint:#8E7565;
+  --gold:#A35F00;--gold-soft:rgba(255,181,31,.2);--on-gold:#1E1200;
+  --line:rgba(120,70,20,.12);--line-2:rgba(163,95,0,.3);--ok:#17894F;--danger:#C62A2A;
+  --glass:rgba(255,248,239,.84);--card-shadow:0 8px 24px rgba(90,45,10,.08);
+  --scrim:linear-gradient(180deg,rgba(255,255,255,0) 40%,rgba(255,255,255,.6) 75%,#FFFFFF 100%);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hdr) + 70px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:500 16.5px/1.55 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased;padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
+@media(min-width:900px){body{padding-bottom:0}}
+h1,h2,h3{font-family:Unbounded,sans-serif;margin:0;line-height:1.1;letter-spacing:-.01em}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 16px}
+@media(min-width:700px){.wrap{padding:0 28px}}
+.muted{color:var(--ink-soft)}
+.gold{background:var(--goldfill);-webkit-background-clip:text;background-clip:text;color:transparent}
+svg.i{width:22px;height:22px;flex:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:10px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* шапка */
+.hdr{position:sticky;top:0;z-index:40;height:var(--hdr);background:var(--glass);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.hdr .wrap{height:100%;display:flex;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:auto}
+.crest{width:44px;height:44px;border-radius:14px;background:var(--fire);display:grid;place-items:center;flex:none;box-shadow:0 6px 18px rgba(240,65,42,.45),inset 0 1px 0 rgba(255,255,255,.25)}
+.crest svg{width:24px;height:24px}
+.brand b{font-family:Unbounded;font-weight:800;font-size:19px;display:block;line-height:1.1}
+.brand small{display:block;color:var(--ink-soft);font-size:15.5px;font-weight:600;white-space:nowrap}
+.nav{display:none;gap:4px}
+.nav a{padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:700;color:var(--ink-soft)}
+.nav a:active{background:var(--surface-2)}
+@media(min-width:900px){.nav{display:flex}}
+.ibtn{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;flex:none;background:var(--surface-2);transition:transform .15s var(--ease)}
+.ibtn:active{transform:scale(.92)}
+.ibtn.sun{color:var(--gold);border:2px solid var(--gold);box-shadow:0 0 12px rgba(255,197,71,.2)}
+.ibtn.sun svg{width:22px;height:22px}
+.btn.hcta{display:none}
+@media(min-width:900px){.btn.hcta{display:inline-flex}}
+.tw{position:relative}
+.pop{position:absolute;top:calc(100% + 10px);right:0;width:250px;background:var(--surface);border:1px solid var(--line-2);border-radius:var(--r);padding:14px;box-shadow:0 18px 40px rgba(0,0,0,.4)}
+.pop[hidden]{display:none}
+.pop p{margin:0 0 10px;font-size:15.5px;font-weight:800;color:var(--ink-faint)}
+.seg{display:flex;gap:4px;background:var(--surface-2);border-radius:12px;padding:4px}
+.seg button{flex:1;min-height:44px;border-radius:9px;font-weight:700;font-size:15.5px;color:var(--ink-soft)}
+.seg button.on{background:var(--goldfill);color:var(--on-gold)}
+
+/* кнопки */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 26px;border-radius:999px;background:var(--fire);color:#fff;font-weight:800;font-size:17px;text-decoration:none;box-shadow:0 10px 26px rgba(240,65,42,.38);transition:transform .15s var(--ease);white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn.sm{min-height:46px;padding:0 20px;font-size:16px}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line-2);box-shadow:none}
+
+/* hero */
+.hero{position:relative;overflow:hidden;border-radius:var(--r-xl);margin-top:16px;min-height:540px;display:flex;align-items:flex-end;background:#120C0A;isolation:isolate}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(12,8,7,.96) 8%,rgba(12,8,7,.55) 50%,rgba(12,8,7,.15) 80%)}
+@media(min-width:900px){.hero{min-height:600px;align-items:center}.hero::after{background:linear-gradient(90deg,rgba(12,8,7,.96) 0%,rgba(12,8,7,.8) 40%,rgba(12,8,7,.1) 75%)}}
+.hero-in{padding:28px 22px;color:#FFF5EA;max-width:640px}
+@media(min-width:900px){.hero-in{padding:56px}}
+.live{display:inline-flex;align-items:center;gap:10px;min-height:38px;padding:0 16px;border-radius:999px;background:rgba(12,8,7,.6);border:1px solid rgba(255,255,255,.14);font-weight:700;font-size:15.5px}
+.live i{width:9px;height:9px;border-radius:50%;background:#46D68F;animation:pulse 1.8s infinite}
+.live.off i{background:#FF6A6A;animation:none}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(70,214,143,.7)}70%{box-shadow:0 0 0 9px rgba(70,214,143,0)}100%{box-shadow:0 0 0 0 rgba(70,214,143,0)}}
+.hero h1{font-size:clamp(40px,9vw,76px);font-weight:800;margin:18px 0 14px}
+.hero p{margin:0;font-size:18px;color:#E7D3C4;max-width:520px}
+.hero-act{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.hero-act .btn.ghost{color:#FFF5EA;border-color:rgba(255,255,255,.3)}
+
+/* преимущества */
+.feats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+@media(min-width:900px){.feats{grid-template-columns:repeat(4,1fr)}}
+.feat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:18px;box-shadow:var(--card-shadow)}
+.feat .ico{width:44px;height:44px;border-radius:14px;background:var(--gold-soft);color:var(--gold);display:grid;place-items:center;margin-bottom:12px}
+.feat b{display:block;font-family:Unbounded;font-size:17px;font-weight:700;line-height:1.2}
+.feat span{display:block;color:var(--ink-soft);font-size:15.5px;margin-top:4px}
+
+/* секции */
+.sec{margin-top:56px}
+.sec-h{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:14px}
+.sec-h h2{font-size:clamp(26px,5vw,38px)}
+.kicker{display:block;color:var(--gold);font-weight:800;font-size:15.5px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:8px}
+
+/* меню */
+.cats{position:sticky;top:var(--hdr);z-index:30;margin:0 -16px;padding:10px 16px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;background:var(--glass);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+@media(min-width:700px){.cats{margin:0 -28px;padding:10px 28px}}
+.cats::-webkit-scrollbar{display:none}
+.cat{flex:none;min-height:44px;padding:0 18px;border-radius:22px;background:var(--surface);border:1px solid var(--line);font-weight:800;font-size:16px;white-space:nowrap;color:var(--ink-soft);transition:all .2s var(--ease)}
+.cat.on{background:var(--goldfill);color:var(--on-gold);border-color:transparent;box-shadow:0 6px 18px rgba(255,165,0,.35)}
+.mh{font-size:21px;margin:26px 2px 12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(3,1fr);gap:16px}}
+@media(min-width:1000px){.grid{grid-template-columns:repeat(4,1fr)}}
+.pc{position:relative;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--card-shadow)}
+.ph{position:relative;aspect-ratio:1/1;background:radial-gradient(circle at 50% 45%,#3A2A22,#120C0A);overflow:hidden}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph::after{content:"";position:absolute;inset:0;background:var(--scrim)}
+.tag{position:absolute;top:10px;left:10px;z-index:2;min-height:28px;display:inline-flex;align-items:center;padding:0 10px;border-radius:14px;font-weight:800;font-size:15.5px;background:var(--fire);color:#fff}
+.tag.halal{background:#17894F}
+.pc-b{padding:2px 14px 0;flex:1}
+.pc-b h3{font-family:Manrope;font-weight:800;font-size:17px;line-height:1.25}
+.pc-b p{margin:4px 0 0;color:var(--ink-soft);font-size:15.5px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pc-f{display:flex;align-items:flex-end;justify-content:space-between;gap:8px;padding:12px 14px 14px}
+.price{display:block;font-family:Unbounded;font-weight:800;font-size:18px;white-space:nowrap}
+.pc-f>span:first-child{min-width:0}
+.price small{font-family:Manrope;font-weight:700;font-size:15.5px;color:var(--ink-soft);margin-right:4px}
+.sizes{display:block;color:var(--ink-faint);font-size:15.5px;font-weight:600;line-height:1.35;margin-top:2px}
+.add{width:46px;height:46px;border-radius:14px;background:var(--goldfill);color:var(--on-gold);display:grid;place-items:center;flex:none;box-shadow:0 6px 16px rgba(255,165,0,.3);text-decoration:none}
+.add svg{width:22px;height:22px}
+
+/* как заказать */
+.steps{display:grid;gap:12px}
+@media(min-width:900px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px 20px 22px 84px;min-height:110px;box-shadow:var(--card-shadow)}
+.step i{position:absolute;left:20px;top:22px;width:48px;height:48px;border-radius:16px;background:var(--fire);color:#fff;font:800 20px Unbounded;display:grid;place-items:center;font-style:normal}
+.step b{display:block;font-size:17.5px;font-weight:800}
+.step span{display:block;color:var(--ink-soft);margin-top:4px}
+
+/* доставка + контакты */
+.two{display:grid;gap:12px}
+@media(min-width:900px){.two{grid-template-columns:1fr 1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px;box-shadow:var(--card-shadow)}
+.card h3{font-size:20px;margin-bottom:14px}
+.rows{display:grid;gap:2px}
+.row{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row span{color:var(--ink-soft)}
+.row b{text-align:right}
+.ct{display:flex;align-items:center;gap:14px;padding:12px 0;text-decoration:none;min-height:56px}
+.ct .ico{width:44px;height:44px;border-radius:14px;background:var(--gold-soft);color:var(--gold);display:grid;place-items:center;flex:none}
+.ct small{display:block;color:var(--ink-soft);font-size:15.5px}
+.ct b{display:block}
+
+/* призыв + футер */
+.cta{position:relative;overflow:hidden;border-radius:var(--r-xl);padding:36px 24px;text-align:center;background:radial-gradient(120% 140% at 50% 0%,#3A1A10 0%,#160D0A 60%);color:#FFF5EA;border:1px solid rgba(255,197,71,.2)}
+.cta h2{font-size:clamp(26px,5vw,40px)}
+.cta p{color:#E7D3C4;margin:12px auto 22px;max-width:460px}
+.foot{margin-top:40px;padding:28px 0 32px;border-top:1px solid var(--line);text-align:center;color:var(--ink-faint);font-size:15.5px}
+.made-by{display:flex;justify-content:center;margin:16px auto 0}
+.made-by a{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;background:#2AABEE;color:#fff;font-size:15.5px;font-weight:800;text-decoration:none}
+
+/* нижняя кнопка на телефоне */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:var(--glass);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-top:1px solid var(--line)}
+.dock .btn{width:100%}
+@media(min-width:900px){.dock{display:none}}
+</style>
+</head>
+<body>
+<header class="hdr"><div class="wrap">
+  <a class="brand" href="#top" aria-label="Doner Queen — наверх">
+    <span class="crest"><svg viewBox="0 0 24 24" fill="#FFD866" stroke="#FFE7A3" stroke-width="1.2" stroke-linejoin="round"><path d="M3 8l4 3 5-6 5 6 4-3-2 11H5L3 8z"/></svg></span>
+    <span><b>Doner Queen</b><small>Шаурма · бургеры · халяль</small></span>
+  </a>
+  <nav class="nav" aria-label="Разделы"><a href="#menu">Меню</a><a href="#how">Как заказать</a><a href="#delivery">Доставка</a><a href="#contacts">Контакты</a></nav>
+  <a class="btn sm hcta" data-order href="https://t.me/doner_queen_bot?startapp" target="_blank" rel="noopener">Заказать</a>
+  <div class="tw">
+    <button class="ibtn sun" id="sun" type="button" aria-label="Оформление" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg></button>
+    <div class="pop" id="pop" hidden><p>Оформление</p><div class="seg" id="seg" role="radiogroup" aria-label="Тема"><button data-v="auto" type="button">Авто</button><button data-v="dark" type="button">Тёмная</button><button data-v="light" type="button">Светлая</button></div></div>
+  </div>
+</div></header>
+
+<main class="wrap" id="top">
+  <section class="hero">
+    <img src="img/hero.jpg" alt="Шаурма на вертеле" fetchpriority="high">
+    <div class="hero-in">
+      <span class="live" id="live"><i></i><span>Открыто до 22:00</span></span>
+      <h1>Шаурма<br><span class="gold">королевского</span><br>размера</h1>
+      <p>Сочная курица и баранина с мангала, свежий лаваш и фирменные соусы. Доставка по Боровлянам за 25–40 минут.</p>
+      <div class="hero-act">
+        <a class="btn" data-order href="https://t.me/doner_queen_bot?startapp" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor"><path d="M9.8 15.2l-.4 5.5c.6 0 .8-.3 1.2-.6l2.8-2.7 5.8 4.3c1 .6 1.8.3 2.1-1l3.8-17.7c.4-1.5-.5-2.1-1.6-1.7L1.4 9.7c-1.5.6-1.5 1.4-.3 1.8l4.6 1.4L16.4 6.2c.5-.3 1-.1.6.2z"/></svg>Заказать в Telegram</a>
+        <a class="btn ghost" href="#menu">Смотреть меню</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="feats">
+    <div class="feat"><div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17" r="3.5"/><circle cx="18.5" cy="17" r="3.5"/><path d="M15 6h2l3 8M5.5 17l3-7h6l4 7M8.5 10L7 6H5"/></svg></div><b>25–40 мин</b><span>Доставка по Боровлянам</span></div>
+    <div class="feat"><div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 8l4 3 5-6 5 6 4-3-2 11H5L3 8z"/></svg></div><b>0 р доставка</b><span>При заказе от 30 р</span></div>
+    <div class="feat"><div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4 0 7-3 7-7 0-4-3-6-4-10-2 2-2 4-3 5-1-2-2-3-2-5-3 3-5 6-5 10 0 4 3 7 7 7z"/></svg></div><b>Мангал</b><span>Котлеты на углях</span></div>
+    <div class="feat"><div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><b>Халяль</b><span>Блюда из баранины</span></div>
+  </div>
+
+  <section class="sec" id="menu" aria-labelledby="menu-h">
+    <div class="sec-h"><div><span class="kicker">Меню</span><h2 id="menu-h">Выбирайте <span class="gold">по-королевски</span></h2></div></div>
+    <div class="cats" id="cats" role="tablist"></div>
+    <div id="menuList"></div>
+  </section>
+
+  <section class="sec" id="how" aria-labelledby="how-h">
+    <div class="sec-h"><div><span class="kicker">Как заказать</span><h2 id="how-h">Три шага до шаурмы</h2></div></div>
+    <div class="steps">
+      <div class="step"><i>1</i><b>Откройте приложение</b><span>Кнопка «Заказать» открывает наше приложение в Telegram — без регистрации.</span></div>
+      <div class="step"><i>2</i><b>Соберите заказ</b><span>Выберите размер, добавьте напитки, укажите адрес и телефон.</span></div>
+      <div class="step"><i>3</i><b>Следите за заказом</b><span>Статус видно в приложении: готовится, курьер в пути, доставлено.</span></div>
+    </div>
+  </section>
+
+  <section class="sec" aria-label="Доставка и контакты">
+    <div class="two">
+      <div class="card" id="delivery">
+        <h3>Доставка</h3>
+        <div class="rows">
+          <div class="row"><span>Зона</span><b>Боровляны</b></div>
+          <div class="row"><span>Время</span><b>25–40 минут</b></div>
+          <div class="row"><span>Стоимость</span><b>3 р · от 30 р — 0 р</b></div>
+          <div class="row"><span>Минимальный заказ</span><b>15 р</b></div>
+          <div class="row"><span>Оплата</span><b>Наличными или картой курьеру</b></div>
+        </div>
+      </div>
+      <div class="card" id="contacts">
+        <h3>Контакты</h3>
+        <a class="ct" href="https://yandex.by/maps/?text=%D0%91%D0%BE%D1%80%D0%BE%D0%B2%D0%BB%D1%8F%D0%BD%D1%8B%2C%20%D1%83%D0%BB.%2040%20%D0%BB%D0%B5%D1%82%20%D0%9F%D0%BE%D0%B1%D0%B5%D0%B4%D1%8B%2C%2021%D0%94" target="_blank" rel="noopener"><span class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><small>Адрес · открыть карту</small><b>Боровляны, ул. 40 лет Победы, 21Д</b></span></a>
+        <div class="ct"><span class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><small>Режим работы</small><b>Ежедневно 11:00–22:00</b></span></div>
+        <a class="ct" href="tel:+375445509988"><span class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 006 6L16 13l5 2v4a2 2 0 01-2 2A16 16 0 013 5a2 2 0 012-2z"/></svg></span><span><small>Телефон</small><b>+375 (44) 550-99-88</b></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec cta">
+    <h2>Голодны? <span class="gold">Закажите сейчас</span></h2>
+    <p>Меню с фото, заказ за минуту и курьер до двери — всё в нашем приложении в Telegram.</p>
+    <a class="btn" data-order href="https://t.me/doner_queen_bot?startapp" target="_blank" rel="noopener">Заказать в Telegram</a>
+  </section>
+
+  <footer class="foot">
+    Doner Queen · Боровляны · <span id="yr">2026</span>
+    <div class="made-by"><a href="https://t.me/tg_studio_BY_bot" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 240 240"><path fill="#fff" d="M100 157l-4 56c6 0 8-3 12-6l27-26 57 42c10 6 18 3 21-9l38-178c4-15-5-21-16-17L14 103c-15 6-15 14-3 18l46 14 106-67c5-3 10-1 6 2z"/></svg>Сделано в TG-Studio</a></div>
+  </footer>
+</main>
+
+<div class="dock"><a class="btn" data-order href="https://t.me/doner_queen_bot?startapp" target="_blank" rel="noopener">Заказать в Telegram</a></div>
+
+<script>
+const ORDER='https://t.me/doner_queen_bot?startapp';
+const MENU=[
+ {id:'s1',c:'Шаурма',n:'Классика',d:'Лаваш, курица, огурец маринованный, томат, капуста, соус Чесночный',s:[[300,7.9],[450,11.6],[600,13.9],[750,15.9]],hit:1},
+ {id:'s2',c:'Шаурма',n:'Грибная',d:'Лаваш, курица, томат, капуста, грибы, соус Сметанно-грибной',s:[[350,10.9],[500,13.6],[650,15.9]]},
+ {id:'s3',c:'Шаурма',n:'Сырная',d:'Лаваш, курица, томат, капуста, сыр, соус Сырный, Горчичный',s:[[350,10.9],[500,13.5],[650,15.9]],hit:1},
+ {id:'s4',c:'Шаурма',n:'Острая',d:'Лаваш, курица, томат, капуста, халапеньо, соус Чили',s:[[350,10.9],[500,13.5],[650,15.9]],hot:1},
+ {id:'s5',c:'Шаурма',n:'Мужская',d:'Лаваш, курица, томат, огурец, морковь по-корейски, лук, соус Чесночный',s:[[350,11.5],[500,14.5],[650,16.5]]},
+ {id:'s6',c:'Шаурма',n:'Салями',d:'Лаваш, курица, томат, капуста, пепперони, соус Чесночный, Барбекю',s:[[350,10.9],[500,13.5],[650,15.9]]},
+ {id:'h1',c:'Халяль',n:'Дурум с бараниной',d:'Лаваш, кебаб с бараниной, лук, зелень, помидор',s:[[300,17]],halal:1},
+ {id:'h2',c:'Халяль',n:'Донер Queen',d:'Баранина. Лаваш, котлета на мангале, капуста, огурец, помидор, соус чесночный',s:[[400,15],[500,16]],halal:1,hit:1},
+ {id:'h3',c:'Халяль',n:'Донер бокс',d:'Баранина. Котлета на мангале, картофель фри, овощи, соусы',s:[[450,19]],halal:1},
+ {id:'b1',c:'Бургеры',n:'Бургер с бараниной',d:'Булочка, котлета, салат, помидор, лук, огурец, соус Гриль',s:[[350,15]],halal:1},
+ {id:'b2',c:'Бургеры',n:'Чизбургер с бараниной',d:'Булочка, котлета, сыр, салат, помидор, лук, огурец, соусы',s:[[375,16]],halal:1,hit:1},
+ {id:'b3',c:'Бургеры',n:'Бургер на углях',d:'Говяжья котлета на мангале, сыр, овощи, соус гриль',s:[[330,12.9]]},
+ {id:'z1',c:'Закуски и напитки',n:'Картофель фри',d:'Хрустящий, с соусом на выбор',s:[[150,4.5],[250,6.5]]},
+ {id:'z2',c:'Закуски и напитки',n:'Кола',d:'Стекло, охлаждённая',s:[[500,3.5]],drink:1},
+ {id:'z3',c:'Закуски и напитки',n:'Айран',d:'Холодный, с мятой',s:[[330,3]],drink:1},
+ {id:'z4',c:'Закуски и напитки',n:'Вода',d:'Без газа',s:[[500,2]],drink:1}
+];
+const CATS=[...new Set(MENU.map(m=>m.c))];
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const num=v=>v.toFixed(2).replace('.',',');
+const unit=m=>m.drink?'мл':'г';
+
+$('#cats').innerHTML=CATS.map((c,i)=>`<button class="cat${i?'':' on'}" role="tab" aria-selected="${!i}" data-i="${i}" type="button">${esc(c)}</button>`).join('');
+$('#menuList').innerHTML=CATS.map((c,ci)=>`<h3 class="mh" id="mc${ci}" data-i="${ci}">${esc(c)}</h3><div class="grid">${MENU.filter(m=>m.c===c).map(m=>{
+  const from=Math.min(...m.s.map(x=>x[1]));
+  const tag=m.hit?'<span class="tag">Хит</span>':m.hot?'<span class="tag">Остро</span>':m.halal?'<span class="tag halal">Халяль</span>':'';
+  return `<article class="pc"><div class="ph"><img src="img/${m.id}.jpg" alt="${esc(m.n)}" loading="lazy" decoding="async" width="512" height="512">${tag}</div>
+   <div class="pc-b"><h3>${esc(m.n)}</h3><p>${esc(m.d)}</p></div>
+   <div class="pc-f"><span><span class="price">${m.s.length>1?'<small>от</small>':''}${num(from)} р</span><span class="sizes">${m.s.map(x=>x[0]).join(' · ')} ${unit(m)}</span></span>
+   <a class="add" href="${ORDER}" target="_blank" rel="noopener" aria-label="Заказать ${esc(m.n)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></a></div></article>`}).join('')}</div>`).join('');
+
+// вкладки меню: подсветка по прокрутке и переход по нажатию
+let lock=0;
+function setCat(i){ let on=null; document.querySelectorAll('.cat').forEach(b=>{const x=+b.dataset.i===i; b.classList.toggle('on',x); b.setAttribute('aria-selected',String(x)); if(x) on=b;});
+  if(on){ const bar=$('#cats'); bar.scrollTo({left:on.offsetLeft-bar.clientWidth/2+on.clientWidth/2,behavior:'smooth'}); } }
+let cur=0;
+function spy(){ if(Date.now()<lock) return; const line=$('#cats').getBoundingClientRect().bottom+60; let c=0;
+  document.querySelectorAll('.mh').forEach(h=>{ if(h.getBoundingClientRect().top<=line) c=+h.dataset.i; });
+  if(c!==cur){ cur=c; setCat(c); } }
+addEventListener('scroll',()=>requestAnimationFrame(spy),{passive:true});
+$('#cats').addEventListener('click',e=>{ const b=e.target.closest('.cat'); if(!b) return; cur=+b.dataset.i; setCat(cur); lock=Date.now()+900; $('#mc'+cur).scrollIntoView({behavior:'smooth',block:'start'}); });
+
+// открыто / закрыто (по Минску)
+(function(){ const h=+new Intl.DateTimeFormat('ru-RU',{hour:'numeric',hour12:false,timeZone:'Europe/Minsk'}).format(new Date());
+  const open=h>=11&&h<22; const l=$('#live'); l.classList.toggle('off',!open); l.querySelector('span').textContent=open?'Открыто до 22:00':'Закрыто · откроемся в 11:00'; })();
+
+// тема
+const KEY='dq_site_theme';
+const getP=()=>{try{return localStorage.getItem(KEY)||'auto'}catch(e){return 'auto'}};
+const sys=()=>matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';
+function applyTheme(p){ try{localStorage.setItem(KEY,p)}catch(e){} document.documentElement.setAttribute('data-theme',p==='auto'?sys():p);
+  document.querySelectorAll('#seg button').forEach(b=>b.classList.toggle('on',b.dataset.v===p));
+  document.querySelector('meta[name=theme-color]').content=getComputedStyle(document.documentElement).getPropertyValue('--bg').trim(); }
+applyTheme(getP());
+matchMedia('(prefers-color-scheme: light)').addEventListener('change',()=>{ if(getP()==='auto') applyTheme('auto'); });
+const pop=$('#pop'), sun=$('#sun');
+const closePop=()=>{pop.hidden=true;sun.setAttribute('aria-expanded','false')};
+sun.addEventListener('click',e=>{e.stopPropagation(); pop.hidden=!pop.hidden; sun.setAttribute('aria-expanded',String(!pop.hidden));});
+$('#seg').addEventListener('click',e=>{const b=e.target.closest('button'); if(!b) return; applyTheme(b.dataset.v); setTimeout(closePop,250);});
+document.addEventListener('click',e=>{ if(!pop.hidden&&!pop.contains(e.target)) closePop(); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closePop(); });
+$('#yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
