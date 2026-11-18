@@ -1,4 +1,4 @@
-<!-- изменено 2026-11-18 14:40 -->
+<!-- изменено 2026-11-18 17:20 -->
 <!doctype html>
 <html lang="ru">
 <head>
@@ -185,6 +185,9 @@ svg.i{width:22px;height:22px;flex:none}
 
 /* нижняя кнопка на телефоне */
 .dock{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:var(--glass);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-top:1px solid var(--line)}
+.dock{transform:translateY(110%);transition:transform .28s cubic-bezier(.2,.8,.2,1)}
+.dock.show{transform:none}
+@media(prefers-reduced-motion:reduce){.dock{transition:none}}
 .dock .btn{width:100%}
 @media(min-width:900px){.dock{display:none}}
 </style>
@@ -272,7 +275,7 @@ svg.i{width:22px;height:22px;flex:none}
   </footer>
 </main>
 
-<div class="dock"><a class="btn" data-order href="https://t.me/doner_queen_bot?startapp" target="_blank" rel="noopener">Заказать в Telegram</a></div>
+<div class="dock" id="dock"><a class="btn" data-order href="https://t.me/doner_queen_bot?startapp" target="_blank" rel="noopener">Заказать в Telegram</a></div>
 
 <script>
 const ORDER='https://t.me/doner_queen_bot?startapp';
@@ -319,6 +322,13 @@ function spy(){ if(Date.now()<lock) return; const line=$('#cats').getBoundingCli
   if(c!==cur){ cur=c; setCat(c); } }
 addEventListener('scroll',()=>requestAnimationFrame(spy),{passive:true});
 $('#cats').addEventListener('click',e=>{ const b=e.target.closest('.cat'); if(!b) return; cur=+b.dataset.i; setCat(cur); lock=Date.now()+900; $('#mc'+cur).scrollIntoView({behavior:'smooth',block:'start'}); });
+
+// нижняя кнопка: видна, только когда на экране нет других кнопок «Заказать в Telegram»
+(function(){ const d=$('#dock'), seen=new Set();
+  const btns=[...document.querySelectorAll('a.btn[data-order]')].filter(b=>!d.contains(b));
+  if(!('IntersectionObserver' in window)){ d.classList.add('show'); return; }
+  const io=new IntersectionObserver(es=>{ es.forEach(e=>e.isIntersecting?seen.add(e.target):seen.delete(e.target)); d.classList.toggle('show',seen.size===0); });
+  btns.forEach(b=>io.observe(b)); })();
 
 // открыто / закрыто (по Минску)
 (function(){ const h=+new Intl.DateTimeFormat('ru-RU',{hour:'numeric',hour12:false,timeZone:'Europe/Minsk'}).format(new Date());
